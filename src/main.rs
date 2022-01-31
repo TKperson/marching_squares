@@ -1,7 +1,7 @@
 use crossterm::{
     cursor::{self, MoveTo},
     style::Print,
-    terminal::{self, Clear, ClearType},
+    terminal::{Clear, ClearType},
     QueueableCommand,
 };
 
@@ -12,8 +12,9 @@ use std::time::{Duration, Instant};
 const FPS: u64 = 24;
 
 struct Map {
-    grid_width: u16,
-    grid_height: u16,
+    // probably going to add this in the future or maybe not
+    // grid_width: u16,
+    // grid_height: u16,
     width: i32,
     height: i32,
     fill_char: &'static str,
@@ -144,7 +145,6 @@ fn init(map: Map) {
 }
 
 fn update(map: &Map, grids: &mut Vec<Vec<Grid>>, balls: &mut TBalls, stdout: &mut Stdout, threshold: f32) {
-    let mut buffer = String::new();
     for y in 0..map.height {
         stdout.queue(MoveTo(0, y as u16)).unwrap();
 
@@ -187,8 +187,8 @@ fn main() {
     let (w, h) = get_terminal_size();
     println!("Your terminal is {} cols wide and {} lines tall", w, h);
     init( Map {
-        grid_width: 100,
-        grid_height: 100,
+        // grid_width: 100,
+        // grid_height: 100,
         width: w,
         height: h,
         fill_char: "A",
