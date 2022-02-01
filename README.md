@@ -1,4 +1,4 @@
-# Marchin squares
+# Marching squares
 Trying out this algorithm to render text-based terminal graphic using rust.
 
 This is basically a terminal-based metaballs similator.
