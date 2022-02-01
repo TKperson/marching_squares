@@ -3,6 +3,8 @@ Trying out this algorithm to render text-based terminal graphic using rust.
 
 This is basically a terminal-based metaballs similator.
 
+![Demo](t-rec.gif)
+
 ## Tested requirements
 * Cargo (>=1.53.0)
 
